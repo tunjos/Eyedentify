@@ -24,9 +24,18 @@ android {
 
 dependencies {
 
+    // DI
+    final koinVersion = '1.0.2'
+
     // Networking
     final retrofitVersion = '2.5.0'
 
+    // -----------------------------------------------------------------------------------------------------------------
+
+    // DI
+    implementation "org.koin:koin-android:$koinVersion"
+
+    // Networking
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
