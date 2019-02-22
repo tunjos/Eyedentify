@@ -28,6 +28,7 @@ dependencies {
     final koinVersion = '1.0.2'
 
     // Networking
+    final okhttpVersion = '3.13.1'
     final retrofitVersion = '2.5.0'
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -36,6 +37,7 @@ dependencies {
     implementation "org.koin:koin-android:$koinVersion"
 
     // Networking
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
