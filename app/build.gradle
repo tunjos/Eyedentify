@@ -24,6 +24,9 @@ android {
 
 dependencies {
 
+    // Testing
+    final jUnit5Version = '5.4.0'
+
     // DI
     final koinVersion = '1.0.2'
 
@@ -42,13 +45,16 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
+    // Testing
+    testImplementation"org.junit.jupiter:junit-jupiter:$jUnit5Version"
+    testImplementation"org.junit.jupiter:junit-jupiter-api:$jUnit5Version"
+
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.core:core-ktx:1.1.0-alpha04'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 }
