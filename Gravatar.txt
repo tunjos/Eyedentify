@@ -1,0 +1,69 @@
+[API]
+HASH = md5(<email>)
+- trim(<email>), strtolower(<email>)
+r/rating:
+- g: suitable for display on all websites with any audience type.
+- pg: may contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
+- r: may contain such things as harsh profanity, intense violence, nudity, or hard drug use.
+- x: may contain hardcore sexual imagery or extremely disturbing violence.
+
+[AVATAR]
+https://www.gravatar.com/avatar/<HASH>
+
+https://www.gravatar.com/avatar/<HASH>?s=<size>
+
+https://www.gravatar.com/avatar/<HASH>?s=<size>?d=<default_image_location(url_encoded)>
+
+https://www.gravatar.com/avatar/<HASH>?s=<size>?d=mp(myster-person)✓
+
+https://www.gravatar.com/avatar/<HASH>?s=<size>?r=<rating>✓
+
+[PROFILE]
+https://en.gravatar.com/<HASH>.json✓
+https://en.gravatar.com/<HASH>.json?s=<size>&r=g&d=mp
+
+[TEST]
+https://www.gravatar.com/avatar/<HASH>?s=<size>&r=g&d=mp
+https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=<size>&r=g&d=mp
+
+https://en.gravatar.com/<HASH>.json?s=<size>&r=g&d=mp
+https://en.gravatar.com/205e460b479e2e5b48aec07710c08d50.json
+
+[SAMPLE]
+- Todo use rating here
+
+{
+  "entry": [
+    {
+      "id": "1",
+      "hash": "2b85c1e9cb2440fb72093c0c8db737e2",
+      "requestHash": "2b85c1e9cb2440fb72093c0c8db737e2",
+      "profileUrl": "http://gravatar.com/gravatar",
+      "preferredUsername": "gravatar",
+      "thumbnailUrl": "https://secure.gravatar.com/avatar/gravatar",
+      "photos": [
+        {
+          "value": "https://secure.gravatar.com/avatar/gravatar",
+          "type": "thumbnail"
+        },
+        {
+          "value": "https://secure.gravatar.com/avatar/gravatar"
+        }
+      ],
+      "name": {
+        "givenName": "Gravatar",
+        "familyName": "Gravatar",
+        "formatted": "Gravatar Gravatar"
+      },
+      "displayName": "gravatar",
+      "aboutMe": "Gravatar",
+      "currentLocation": "San Gravatar",
+      "urls": [
+        {
+          "value": "https://en.gravatar.com",
+          "title": "Gravatar"
+        }
+      ]
+    }
+  ]
+}
