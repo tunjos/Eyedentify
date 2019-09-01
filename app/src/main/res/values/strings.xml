@@ -1,3 +1,10 @@
 <resources>
+
     <string name="app_name">Eyedentify</string>
+
+    <!-- MainActivity -->
+    <string name="search">Search</string>
+    <string name="unlock">Unlock</string>
+    <string name="about">About</string>
+
 </resources>
