@@ -15,7 +15,7 @@ The Gravatar Logo and Gravatar icons are a property of <a href="https://automatt
 Screenshots
 ----------
 
-<img src="images/scr_main.png" width="250"> <img src="images/scr_search.png" width="250"> <img src="images/scr_result.png" width="250">
+<img src="images/scr_main.jpg" width="250"> <img src="images/scr_search.jpg" width="250"> <img src="images/scr_result.jpg" width="250">
 
 
 Architecture
