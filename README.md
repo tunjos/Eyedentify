@@ -6,6 +6,7 @@ Eyedentify
 ###### Email Identification for your Eyes only...
 
 <img src="images/cover.jpg" alt="Cover"/>  
+
 [![Build Status](https://app.bitrise.io/app/4aee046d11ffe00d/status.svg?token=6lBBrAkmYlnzp8Ufl3M0qg&branch=master)](https://app.bitrise.io/app/4aee046d11ffe00d)
 
 Info
