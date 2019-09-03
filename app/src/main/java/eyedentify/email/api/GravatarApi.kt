@@ -7,11 +7,11 @@ import retrofit2.http.Path
 
 interface GravatarApi {
 
-    @GET("/avatar/{hash}s=$DEFAULT_AVATAR_SIZE&r={rating}&d=mp")
-    fun avatar(@Path("hash") hash: String, @Path("rating") rating: String = DEFAULT_AVATAR_RATING): Single<Profile>
-
     @GET("/{hash}.json")
-    fun profile(@Path("hash") hash: String)
+    fun profile(@Path("hash") hash: String): Single<Profile>
+
+    @GET("/{hash}s=$DEFAULT_AVATAR_SIZE&r={rating}&d=mp")
+    fun avatar(@Path("hash") hash: String, @Path("rating") rating: String = DEFAULT_AVATAR_RATING)
 
     companion object {
         const val DEFAULT_AVATAR_SIZE = 100
