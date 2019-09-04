@@ -12,5 +12,6 @@ data class Entry(
     val profileUrl: String? = null,
     val requestHash: String? = null,
     val thumbnailUrl: String? = null,
-    val urls: List<Url>? = null
+    val urls: List<Url>? = null,
+    var email: String? = null
 )

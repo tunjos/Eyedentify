@@ -6,5 +6,12 @@
     <string name="search">Search</string>
     <string name="unlock">Unlock</string>
     <string name="about">About</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <!-- SearchActivity -->
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="say_the_email">Say the Email</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 
 </resources>

@@ -28,37 +28,64 @@ android {
 
 dependencies {
 
-    // Testing
-    final jUnit5Version = '5.4.0'
+    // AndroidX
+    final annotationVersion = '1.1.0'
+    final cardviewVersion = '1.0.0'
+    final constraintlayoutVersion = '1.1.2'
+    final recyclerviewVersion = '1.0.0'
 
     // DI
     final koinVersion = '1.0.2'
 
+    // Libraries
+    final glideVersion = '4.9.0'
+
+    // Material
+    final materialVersion = '1.0.0'
+
     // Networking
     final okhttpVersion = '3.13.1'
     final retrofitVersion = '2.5.0'
+    final rxAndroidVersion = '2.1.1'
 
-    // -----------------------------------------------------------------------------------------------------------------
+    // Testing
+    final jUnit5Version = '5.4.0'
+
+
+    // ---------------------------------------------------------------------------------------------
+
+    // AndroidX
+    annotationProcessor "androidx.annotation:annotation:$annotationVersion"
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation "androidx.cardview:cardview:$cardviewVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+    implementation 'androidx.core:core-ktx:1.1.0-alpha04'
+    implementation "androidx.recyclerview:recyclerview:$recyclerviewVersion"
 
     // DI
     implementation "org.koin:koin-android:$koinVersion"
+
+    // Libraries
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+//    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Material
+    implementation "com.google.android.material:material:$materialVersion"
 
     // Networking
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
 
     // Testing
-    testImplementation"org.junit.jupiter:junit-jupiter:$jUnit5Version"
-    testImplementation"org.junit.jupiter:junit-jupiter-api:$jUnit5Version"
-
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.core:core-ktx:1.1.0-alpha04'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    testImplementation "org.junit.jupiter:junit-jupiter:$jUnit5Version"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnit5Version"
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 }

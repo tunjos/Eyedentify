@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- search_list_item  -->
+    <dimen name="avatar_cardview_height">140dp</dimen>
+    <dimen name="avatar_size">100dp</dimen>
+    <dimen name="avatar_margin">20dp</dimen>
+    <dimen name="avatar_textview_margin_left">10dp</dimen>
+    <dimen name="search_list_item_search">150dp</dimen>
+    <dimen name="avatar_fullname_textsize">17sp</dimen>
+</resources>

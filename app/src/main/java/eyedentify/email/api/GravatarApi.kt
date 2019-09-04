@@ -10,11 +10,14 @@ interface GravatarApi {
     @GET("/{hash}.json")
     fun profile(@Path("hash") hash: String): Single<Profile>
 
-    @GET("/{hash}s=$DEFAULT_AVATAR_SIZE&r={rating}&d=mp")
-    fun avatar(@Path("hash") hash: String, @Path("rating") rating: String = DEFAULT_AVATAR_RATING)
-
     companion object {
-        const val DEFAULT_AVATAR_SIZE = 100
-        const val DEFAULT_AVATAR_RATING = "g"
+        const val HTTP_404 = 200
+
+        private const val DEFAULT_AVATAR_SIZE = 200
+        private const val DEFAULT_AVATAR_RATING = "g"
+
+        fun generateThumbnailUrl(thumbnailUrl: String, rating: String = DEFAULT_AVATAR_RATING) =
+            "$thumbnailUrl?s=$DEFAULT_AVATAR_SIZE&r=$rating&d=mp"
+
     }
 }
