@@ -25,6 +25,7 @@
                 android:layout_height="@dimen/avatar_size"
                 android:layout_margin="@dimen/avatar_margin"
                 android:background="@color/colorPrimary"
+                android:padding="1dp"
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintLeft_toLeftOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -37,7 +38,7 @@
                 android:layout_marginLeft="@dimen/avatar_textview_margin_left"
                 android:layout_marginTop="32dp"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="@dimen/avatar_fullname_textsize"
+                android:textSize="@dimen/textsize_17sp"
                 card_view:layout_constraintLeft_toRightOf="@id/avatar"
                 card_view:layout_constraintTop_toTopOf="parent"
                 tools:text="James Bond" />
@@ -49,9 +50,13 @@
                 android:layout_marginStart="@dimen/avatar_textview_margin_left"
                 android:layout_marginLeft="@dimen/avatar_textview_margin_left"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:maxLines="2"
+                android:ellipsize="end"
                 card_view:layout_constraintLeft_toRightOf="@id/avatar"
                 card_view:layout_constraintTop_toBottomOf="@id/fullname"
-                tools:text="james@bond.com" />
+                tools:text="Bond" />
 
             <TextView
                 android:id="@+id/email"
@@ -62,7 +67,7 @@
                 android:layout_marginTop="4dp"
                 card_view:layout_constraintLeft_toRightOf="@id/avatar"
                 card_view:layout_constraintTop_toBottomOf="@id/about"
-                tools:text="Bond" />
+                tools:text="james@bond.com" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

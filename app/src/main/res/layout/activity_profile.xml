@@ -20,14 +20,248 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_profile" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize">
+
+                <View
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_cover_height"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:background="@color/colorPrimary"
+                    android:padding="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/guideline_h"
+                    app:layout_constraintLeft_toLeftOf="@id/guideline_v"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/avatar_margin"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/textsize_17sp"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/avatar"
+                    tools:text="James Bond" />
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/avatar_margin"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/fullname"
+                    tools:text="About" />
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/avatar_margin"
+                    android:background="@color/colorPrimary"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/about" />
+
+                <LinearLayout
+                    android:id="@+id/container_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/avatar_margin"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/separator">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_field" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/avatar_textview_margin_left"
+                        android:layout_marginLeft="@dimen/avatar_textview_margin_left"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        tools:text="James" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_surname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/container_name">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/surname_field" />
+
+                    <TextView
+                        android:id="@+id/surname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/avatar_textview_margin_left"
+                        android:layout_marginLeft="@dimen/avatar_textview_margin_left"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        tools:text="Bond" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/container_aka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/container_surname">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aka_field" />
+
+                    <TextView
+                        android:id="@+id/aka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/avatar_textview_margin_left"
+                        android:layout_marginLeft="@dimen/avatar_textview_margin_left"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        tools:text="007" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/container_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/container_aka">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username_field" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/avatar_textview_margin_left"
+                        android:layout_marginLeft="@dimen/avatar_textview_margin_left"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        tools:text="jamesbond" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/module_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/avatar_margin"
+                    android:drawableEnd="@drawable/ic_view_module"
+                    android:drawableRight="@drawable/ic_view_module"
+                    android:text="@string/contact"
+                    android:textSize="@dimen/textsize_17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toLeftOf="@id/guideline_v2"
+                    app:layout_constraintTop_toBottomOf="@id/container_username" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_marginTop="@dimen/avatar_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="@dimen/avatar_textview_margin_left"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/module_contact"
+                    tools:text="james@bond.com" />
+
+                <TextView
+                    android:id="@+id/url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_link"
+                    android:drawableLeft="@drawable/ic_link"
+                    android:drawablePadding="@dimen/avatar_textview_margin_left"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/email"
+                    tools:text="https://eyedentify.email" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_location_city"
+                    android:drawableLeft="@drawable/ic_location_city"
+                    android:drawablePadding="@dimen/avatar_textview_margin_left"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_v"
+                    app:layout_constraintTop_toBottomOf="@id/url"
+                    tools:text="Worldwide" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/avatar_margin" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_v2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/avatar_margin" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="160dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/ic_save" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

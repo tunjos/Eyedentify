@@ -8,10 +8,17 @@
     <string name="about">About</string>
     <string name="title_activity_search">SearchActivity</string>
 
+    <!-- ProfileActivity -->
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="name_field">Name:</string>
+    <string name="surname_field">Surname:</string>
+    <string name="aka_field">Aka:</string>
+    <string name="username_field">Username:</string>
+    <string name="contact">Contact</string>
+
     <!-- SearchActivity -->
     <string name="email">Email</string>
     <string name="enter_email">Enter Email</string>
     <string name="say_the_email">Say the Email</string>
-    <string name="title_activity_profile">ProfileActivity</string>
 
 </resources>

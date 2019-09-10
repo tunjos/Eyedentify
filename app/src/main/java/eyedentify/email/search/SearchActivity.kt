@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import eyedentify.email.R
 import eyedentify.email.model.Entry
+import eyedentify.email.profile.ProfileActivity
 import eyedentify.email.search.adapters.SearchAdapter
 import eyedentify.email.search.presenters.SearchPresenter
 import kotlinx.android.synthetic.main.activity_search.*
@@ -22,17 +23,15 @@ import org.koin.android.ext.android.inject
 
 class SearchActivity : AppCompatActivity(), eyedentify.email.search.views.SearchView,
     SearchAdapter.ClickListener {
-
-    private val imm: InputMethodManager? by lazy {
-        getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
-    }
-
     private lateinit var searchView: SearchView
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
 
     private val searchPresenter: SearchPresenter by inject()
     private val searchAdapter: SearchAdapter by inject()
+    private val imm: InputMethodManager? by lazy {
+        getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,8 +48,8 @@ class SearchActivity : AppCompatActivity(), eyedentify.email.search.views.Search
         handleIntent(intent)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Snackbar.make(view, "Save All Coming Soon...", Snackbar.LENGTH_LONG)
+                .setAction("Save All", null).show()
         }
     }
 
@@ -113,16 +112,6 @@ class SearchActivity : AppCompatActivity(), eyedentify.email.search.views.Search
         searchAdapter.setItems(emptyList())
     }
 
-    companion object {
-
-        fun startActivityForResult(activity: Activity, requestCode: Int) {
-            val options = Bundle()
-
-            val intent = Intent(activity, SearchActivity::class.java)
-            activity.startActivityForResult(intent, requestCode)
-        }
-    }
-
     override fun showProgress(show: Boolean) {
         if (show) {
             recyclerView.visibility = View.GONE
@@ -161,7 +150,16 @@ class SearchActivity : AppCompatActivity(), eyedentify.email.search.views.Search
     }
 
     override fun onClickEntry(entry: Entry) {
-        Snackbar.make(fab, "Go to Profile", Snackbar.LENGTH_LONG)
-            .setAction("Action", null).show()
+        ProfileActivity.startActivity(this, entry)
+    }
+
+    companion object {
+
+        fun startActivityForResult(activity: Activity, requestCode: Int) {
+            val options = Bundle()
+
+            val intent = Intent(activity, SearchActivity::class.java)
+            activity.startActivityForResult(intent, requestCode)
+        }
     }
 }

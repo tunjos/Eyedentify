@@ -1,5 +1,7 @@
 package eyedentify.email.model
 
+import java.io.Serializable
+
 data class Entry(
     val aboutMe: String? = null,
     val currentLocation: String? = null,
@@ -14,4 +16,4 @@ data class Entry(
     val thumbnailUrl: String? = null,
     val urls: List<Url>? = null,
     var email: String? = null
-)
+) : Serializable
