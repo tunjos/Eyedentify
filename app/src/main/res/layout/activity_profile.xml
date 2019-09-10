@@ -201,6 +201,8 @@
                     android:drawablePadding="@dimen/avatar_textview_margin_left"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
+                    android:autoLink="email"
+                    android:textColorLink="@color/colorPrimary"
                     app:layout_constraintLeft_toRightOf="@id/guideline_v"
                     app:layout_constraintTop_toBottomOf="@id/module_contact"
                     tools:text="james@bond.com" />
@@ -214,6 +216,8 @@
                     android:drawablePadding="@dimen/avatar_textview_margin_left"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
+                    android:autoLink="web"
+                    android:textColorLink="@color/colorPrimary"
                     app:layout_constraintLeft_toRightOf="@id/guideline_v"
                     app:layout_constraintTop_toBottomOf="@id/email"
                     tools:text="https://eyedentify.email" />
@@ -227,6 +231,7 @@
                     android:drawablePadding="@dimen/avatar_textview_margin_left"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
+                    android:autoLink="map"
                     app:layout_constraintLeft_toRightOf="@id/guideline_v"
                     app:layout_constraintTop_toBottomOf="@id/url"
                     tools:text="Worldwide" />

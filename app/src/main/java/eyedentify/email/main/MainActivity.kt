@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import eyedentify.email.R
 import eyedentify.email.search.SearchActivity
+import eyedentify.email.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         when (item?.itemId) {
             R.id.menu_search -> {
                 SearchActivity.startActivityForResult(this, RC_SEARCH)
+            }
+            R.id.menu_settings -> {
+                SettingsActivity.startActivity(this)
             }
         }
         return super.onOptionsItemSelected(item)

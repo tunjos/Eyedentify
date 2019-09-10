@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/app_name">
+
+        <Preference
+            app:key="version"
+            app:title="@string/version" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/search_history">
+
+        <SwitchPreferenceCompat
+            app:key="clear_history"
+            app:title="@string/clear_search_history_periodically" />
+
+        <ListPreference
+            app:defaultValue="reply"
+            app:dependency="clear_history"
+            app:entries="@array/period_entries"
+            app:entryValues="@array/period_values"
+            app:key="clear_period"
+            app:title="@string/clear_search_history_frequency"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

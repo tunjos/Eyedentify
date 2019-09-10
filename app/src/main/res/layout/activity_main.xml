@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:theme="@style/EyedentifyToolbarTheme"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="29dp" />

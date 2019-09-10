@@ -19,8 +19,8 @@
         tools:ignore="AlwaysShowAction,AppCompatResource" />
 
     <item
-        android:id="@+id/menu_about"
-        android:title="@string/about"
+        android:id="@+id/menu_settings"
+        android:title="@string/settings"
         app:showAsAction="never" />
 
 </menu>
